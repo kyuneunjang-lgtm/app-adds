@@ -7,7 +7,7 @@
     <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --primary: #6C5CE7;
@@ -159,6 +159,13 @@
             justify-content: center;
             font-size: 1.8rem;
             margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .masterfit .app-icon {
@@ -200,13 +207,16 @@
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             text-align: center;
             padding: 14px 28px;
             border-radius: 12px;
             font-weight: 600;
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: opacity 0.3s, background-color 0.3s;
         }
 
         .btn-masterfit {
@@ -215,8 +225,9 @@
         }
 
         .btn-aily {
-            background: var(--accent-diary);
-            color: #FFF;
+            background: #00CEC9;
+            color: #0F0C20;
+            font-weight: 700;
         }
 
         .btn:hover {
@@ -307,12 +318,12 @@
         <section id="apps">
             <h2 class="section-title">Our Services</h2>
             <div class="apps-grid">
-                
+
                 <!-- MasterFit App -->
                 <div class="app-card masterfit">
                     <div>
                         <div class="app-icon">
-                            <i class="fa-solid fa-shirt"></i>
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6c/3c/72/6c3c7279-ca7d-bbf8-4839-903c41970b8e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" alt="MasterFit 앱 아이콘">
                         </div>
                         <h3>MasterFit</h3>
                         <p>12명의 전문 패션 멘토에게 받는 매일의 OOTD 검증! 나만의 시그니처 스타일을 세우고, 'Runway'에서 다른 사용자들과 당당하게 패션 센스를 겨뤄보세요.</p>
@@ -323,25 +334,29 @@
                             <span class="tag">#런웨이 커뮤니티</span>
                         </div>
                     </div>
-                    <a href="#contact" class="btn btn-masterfit">앱스토어에서 보기</a>
+                    <a href="https://apps.apple.com/kr/app/%EC%B0%A9%EC%9E%A5-%EC%8A%A4%ED%83%80%EC%9D%BC-%EB%B6%84%EC%84%9D-%ED%8C%A8%EC%85%98-%ED%8F%89%EA%B0%80-masterfit/id6777663499" target="_blank" class="btn btn-masterfit">
+                        <i class="fa-brands fa-apple"></i> App Store에서 보기
+                    </a>
                 </div>
 
                 <!-- Aily App -->
                 <div class="app-card aily">
                     <div>
                         <div class="app-icon">
-                            <i class="fa-solid fa-book-bookmark"></i>
+                            <img src="https://play-lh.googleusercontent.com/mnvrK25A5lk7cVeS4jUHuUmglEd_3RAuSFJAQ15CwMuY3giRox_nOU_vxwDIrffFrHQo3YiHd2o2jFOpwcka=s96-rw" alt="Aily 앱 아이콘">
                         </div>
-                        <h3>Aily</h3>
-                        <p>지친 하루의 끝, 나와 똑닮은 AI 메이트가 건네는 따뜻하고 재치 있는 일상 다이어리. 오늘 있었던 소소한 일들을 기록하면 AI가 감성적인 하루 요약과 피드백을 남겨줍니다.</p>
+                        <h3>Aily (에일리)</h3>
+                        <p>지친 하루의 끝, 나와 소통하는 나만의 AI 일상 친구. 오늘 있었던 소소한 하루 일상을 기록하고 감성적인 피드백과 다이어리 요약을 받아보세요.</p>
                         <div class="app-tags">
-                            <span class="tag">#AI 다이어리</span>
+                            <span class="tag">#AI 일상 다이어리</span>
                             <span class="tag">#감성 기록</span>
-                            <span class="tag">#AI 친구</span>
-                            <span class="tag">#일상 회고</span>
+                            <span class="tag">#AI 메이트</span>
+                            <span class="tag">#Google Play</span>
                         </div>
                     </div>
-                    <a href="#contact" class="btn btn-aily">출시 알림 받기</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.sw.town.aily&hl=ko" target="_blank" class="btn btn-aily">
+                        <i class="fa-brands fa-google-play"></i> Google Play에서 보기
+                    </a>
                 </div>
 
             </div>
@@ -358,13 +373,13 @@
             <div class="footer-content">
                 <div>
                     <p><strong>AilySoft (에일리소프트)</strong></p>
-                    <p style="margin-top: 4px;">문의: <a href="mailto:support@ailysoft.com" style="color: var(--primary-light);">support@ailysoft.com</a></p>
+                    <p style="margin-top: 4px;">문의: <a href="mailto:kyuneunjang@gmail.com" style="color: var(--primary-light);">kyuneunjang@gmail.com</a></p>
                     <p style="margin-top: 4px; font-size: 0.8rem; color: #636E72;">© 2026 AilySoft Inc. All rights reserved.</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">개인정보 처리방침</a>
                     <a href="#">이용약관</a>
-                    <a href="./app-ads.txt" target="_blank" style="opacity: 0.5;">app-ads.txt</a>
+                    <a href="./app-ads.txt" target="_blank" style="display: none;">app-ads.txt</a>
                 </div>
             </div>
         </footer>
